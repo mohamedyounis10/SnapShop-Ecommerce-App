@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "660252661856",
+    "project_id": "snapshop-47700",
+    "storage_bucket": "snapshop-47700.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:660252661856:android:b62126c390e56a116c8b05",
+        "android_client_info": {
+          "package_name": "com.example.snapshop"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCNemxtj8om1WSU3QiOprFsQ69F-6LyUgg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
