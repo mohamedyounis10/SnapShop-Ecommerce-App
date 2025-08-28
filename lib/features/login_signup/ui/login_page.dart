@@ -46,7 +46,6 @@ class LoginScreen extends StatelessWidget {
                   // Prefetch home data
                   Future.microtask(() {
                     context.read<HomeCubit>().loadProducts();
-                    context.read<HomeCubit>().initializeAfterLogin();
                   });
                   Navigator.of(context).push(
                       MaterialPageRoute(builder: (c){

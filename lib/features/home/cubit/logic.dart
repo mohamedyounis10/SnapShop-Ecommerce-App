@@ -18,8 +18,6 @@ class HomeCubit extends Cubit<HomeState> {
   List<Product> products = [];
   List<String> categories = [];
   List<Product> favorites = [];
-  List<Product> userOrder = [];
-  Map<int, int> productQuantities = {};
 
   Future<void> loadProducts() async {
     emit(HomeLoading());
@@ -39,11 +37,6 @@ class HomeCubit extends Cubit<HomeState> {
     } catch (e) {
       emit(HomeError(e.toString()));
     }
-  }
-
-  // Initialize after login
-  Future<void> initializeAfterLogin() async {
-    await loadFavorites();
   }
 
   Future<void> loadFavorites() async {

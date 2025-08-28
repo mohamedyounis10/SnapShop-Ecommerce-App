@@ -1,10 +1,9 @@
 import 'package:firebase_auth/firebase_auth.dart';
-import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:snapshop/features/login_signup/cubit/state.dart';
 import 'package:email_otp/email_otp.dart';
-
 import '../../../db/firebase.dart';
+
 class AuthCubit extends Cubit<AuthState> {
   AuthCubit() : super(InitState());
 
@@ -145,50 +144,6 @@ class AuthCubit extends Cubit<AuthState> {
     }
   }
 
-  // Forget password - (Phone or gmail)
-  void selectMethod(String method) {
-    selectedMethod = method;
-    emit(SelectionUpdatedState(method));
-  }
-
-  // Forget password - (Phone or gmail)
-  /*
-  void proceedToConfirmation() async {
-    if (selectedMethod == "email") {
-      emit(LoadingState());
-      try {
-        // Check if email exists in Firebase
-        final methods = await FirebaseAuth.instance.fetchSignInMethodsForEmail(_email);
-
-        if (methods.isEmpty) {
-          emit(SelectionErrorState('Email not found. Please check your email or sign up.'));
-          return;
-        }
-
-        // Email exists, send password reset email
-        await FirebaseAuth.instance.sendPasswordResetEmail(
-          email: _email,
-        );
-        emit(ProceedToConfirmationState());
-      } catch (e) {
-        emit(SelectionErrorState('Failed to send reset email: ${e.toString()}'));
-      }
-    } else {
-      emit(SelectionErrorState('Please select email method'));
-    }
-  }
-*/
-  // Conform password
-  Future<void> confirmCode(String code) async {
-    if (code.trim().length < 4) {
-      emit(ConfirmFailureState('Code must be 4 digits'));
-      return;
-    }
-    emit(ConfirmLoadingState());
-    await Future.delayed(const Duration(seconds: 1));
-    emit(ConfirmSuccessState());
-  }
-
   // Terms check box
   void checkBox() {
     isChecked = !isChecked;
@@ -196,7 +151,6 @@ class AuthCubit extends Cubit<AuthState> {
   }
 
   // Reset password by email
-  // AuthCubit
   Future<void> resetPassword(String email) async {
     emit(ResetPasswordLoadingState());
 
@@ -217,7 +171,6 @@ class AuthCubit extends Cubit<AuthState> {
       emit(ResetPasswordFailureState("Unexpected error: $e"));
     }
   }
-
 
   // Error
   void errorMessage() {
