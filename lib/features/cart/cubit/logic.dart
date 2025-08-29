@@ -1,7 +1,7 @@
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:snapshop/features/cart/cubit/state.dart';
 
-import '../../../db/firebase.dart';
+import '../../../core/db/firebase.dart';
 import '../../../models/order.dart';
 import '../../../models/product.dart';
 

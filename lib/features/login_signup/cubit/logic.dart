@@ -2,7 +2,7 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:snapshop/features/login_signup/cubit/state.dart';
 import 'package:email_otp/email_otp.dart';
-import '../../../db/firebase.dart';
+import '../../../core/db/firebase.dart';
 
 class AuthCubit extends Cubit<AuthState> {
   AuthCubit() : super(InitState());

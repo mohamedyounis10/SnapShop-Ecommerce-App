@@ -1,7 +1,7 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:snapshop/features/account/cubit/state.dart';
-import '../../../db/firebase.dart';
+import '../../../core/db/firebase.dart';
 
 class ProfileCubit extends Cubit<ProfileState> {
   // Variables

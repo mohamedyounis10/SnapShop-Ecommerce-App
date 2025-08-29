@@ -1,7 +1,7 @@
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:snapshop/features/home/cubit/state.dart';
-import '../../../api/api_service.dart';
-import '../../../db/firebase.dart';
+import '../../../core/api/api_service.dart';
+import '../../../core/db/firebase.dart';
 import '../../../models/product.dart';
 
 class HomeCubit extends Cubit<HomeState> {
