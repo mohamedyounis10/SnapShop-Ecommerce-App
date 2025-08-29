@@ -276,4 +276,4 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 **Made with ❤️ using Flutter & Firebase**
 
-*Last updated: December 2024*
+*Mohamed Younis*
