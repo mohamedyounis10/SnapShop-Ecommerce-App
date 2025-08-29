@@ -54,7 +54,9 @@ A modern, responsive Flutter e-commerce application with Firebase backend integr
 ### Project Structure
 ```
 lib/
-├── core/                    # Core utilities and constants
+├── core/                   # Core utilities and constants
+|   ├── api/                # API service layer
+|   ├── db/                 # Firebase database services
 │   ├── app_color.dart      # Centralized color management
 │   ├── custom_button.dart  # Reusable UI components
 │   └── custom_textformfield_container.dart
@@ -65,9 +67,7 @@ lib/
 │   ├── login_signup/      # Authentication flows
 │   ├── onboarding/        # App introduction screens
 │   └── splash_screen/     # App launch screen
-├── models/                 # Data models
-├── api/                    # API service layer
-└── db/                     # Firebase database services
+└──  models/                # Data models
 ```
 
 ### Key Components
