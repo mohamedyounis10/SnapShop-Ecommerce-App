@@ -54,7 +54,7 @@ class SelectionErrorState extends AuthState {
 
 class ProceedToConfirmationState extends AuthState {}
 
-/// 🔹 Forget Password – Step 2: Confirm Code
+// Forget Password – Step 2: Confirm Code
 class ConfirmLoadingState extends AuthState {}
 class ConfirmSuccessState extends AuthState {}
 class ConfirmFailureState extends AuthState {
@@ -62,7 +62,7 @@ class ConfirmFailureState extends AuthState {
   ConfirmFailureState(this.message);
 }
 
-/// 🔹 Forget Password – Step 3: Reset Password
+// Forget Password – Step 3: Reset Password
 class ToggleNewPasswordVisibilityState extends AuthState {
   final bool isObscure;
   ToggleNewPasswordVisibilityState(this.isObscure);

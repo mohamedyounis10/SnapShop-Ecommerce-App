@@ -48,7 +48,6 @@ class ApiService {
       final response = await http.get(
         Uri.parse('$baseUrl/products/categories'),
       );
-
       if (response.statusCode == 200) {
         final List<dynamic> categoriesData = jsonDecode(response.body);
         final List<String> categories = categoriesData

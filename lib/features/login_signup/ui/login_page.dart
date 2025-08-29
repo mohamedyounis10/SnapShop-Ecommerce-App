@@ -34,6 +34,12 @@ class LoginScreen extends StatelessWidget {
             padding: EdgeInsets.all(20.0.w),
             child: BlocConsumer<AuthCubit, AuthState>(
               listener: (context,state){
+                if(state is NextPageState){
+                  Navigator.push(context, MaterialPageRoute(builder: (c){
+                    return SignupScreen();
+                  })
+                  );
+                }
                 if(state is ErrorState){
                   ScaffoldMessenger.of(context).showSnackBar(
                     SnackBar(
@@ -245,7 +251,7 @@ class LoginScreen extends StatelessWidget {
                     Align(
                       alignment: Alignment.topRight,
                       child:TextButton(onPressed: (){
-                        // Go page forget password
+                        cubit.nextPage();
                       }, child: Row(
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
