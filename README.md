@@ -138,6 +138,8 @@ lib/
 - **Custom APIs**: Add your own product APIs
 
 ## 📱 Screenshots
+<img width="1920" height="1080" alt="1" src="https://github.com/user-attachments/assets/e209cef3-23c9-4cf2-b915-9fb65859f032" />
+<img width="1920" height="1080" alt="2" src="https://github.com/user-attachments/assets/32d33e17-f425-402a-89f4-868cc09cc050" />
 
 ### Main Screens
 - **Splash Screen**: App launch with branding
